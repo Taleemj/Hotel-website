@@ -4,9 +4,16 @@
   box-sizing: border-box;
   overflow-x: hidden;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  transition: all 0.5s;
 }
 p {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+.navbar {
+  width: 100%;
+  margin-left: 0;
+  position: fixed;
+  top: 0;
 }
 nav {
   position: absolute;
@@ -47,7 +54,7 @@ header {
   place-items: center;
 }
 header div {
-  width: 50%;
+  width: 60%;
   text-align: center;
   color: #fff;
 }
@@ -55,10 +62,14 @@ header div {
 header div h3 {
   margin-bottom: 10px;
   font-size: 1.2rem;
+  font-family: "Courier New", Courier, monospace;
+}
+.menu {
+  display: none;
 }
 header div h1 {
   margin: 0;
-  font-size: 5rem;
+  font-size: 6rem;
 }
 header div p {
   margin: 10px 0;
@@ -74,24 +85,31 @@ header div button {
   padding: 15px 25px;
   cursor: pointer;
 }
+header div button:hover {
+  background-color: #ee9e0a;
+}
 
 @media (max-width: 600px) {
   nav {
     width: 100%;
     margin-left: 0;
+    z-index: 2;
+  }
+  .menu {
+    display: block;
+    font-size: 1.8rem;
   }
   nav ul {
     flex-direction: column;
     position: fixed;
-    display: none;
-    top: 80px;
+    display: flex;
     background-color: #fff;
     width: 100%;
     left: 0;
-    padding: 40px 10px;
+    padding: 10px 10px;
   }
   nav ul li {
-    margin: 10px 0;
+    margin: 15px 0;
   }
   nav ul li a {
     text-decoration: none;
